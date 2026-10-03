@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Шахты Шина — демо-сайт</title>
+<style>
+:root{
+  --bg:#0f1115;
+  --card:#171a21;
+  --muted:#aab0bb;
+  --text:#f4f6f8;
+  --accent:#f2b84b;
+  --line:#292e38;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+.wrap{max-width:980px;margin:auto;padding:0 20px}
+.hero{
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(rgba(15,17,21,.78),rgba(15,17,21,.92)),
+    radial-gradient(circle at 80% 20%,#343a46 0,#0f1115 55%);
+}
+.badge{
+  display:inline-block;
+  padding:7px 11px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--muted);
+  font-size:14px;
+}
+h1{font-size:clamp(40px,8vw,76px);line-height:1.02;margin:18px 0 14px}
+h2{font-size:32px;margin:0 0 20px}
+.lead{font-size:20px;color:#d7dbe1;max-width:680px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-block;
+  padding:14px 20px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:700;
+}
+.btn-main{background:var(--accent);color:#151515}
+.btn-alt{border:1px solid var(--line);color:var(--text)}
+section{padding:64px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+}
+.card h3{margin:0 0 8px}
+.price{font-size:28px;font-weight:700;margin-top:12px}
+.muted{color:var(--muted)}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.point{padding:18px;border-left:3px solid var(--accent);background:#13161c}
+.cta{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:30px;
+}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
+.note{
+  margin-top:18px;
+  padding:12px 14px;
+  background:#13161c;
+  border:1px dashed #454b57;
+  border-radius:10px;
+  color:var(--muted);
+}
+@media(max-width:720px){
+  .grid,.points{grid-template-columns:1fr}
+  .hero{min-height:78vh}
+  h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">ДЕМО • ШИНОМОНТАЖ</span>
+    <h1>Шахты Шина</h1>
+    <p class="lead">Шиномонтаж без лишнего ожидания: переобувка, балансировка и ремонт проколов. Запись по телефону или в мессенджере.</p>
+    <div class="actions">
+      <a class="btn btn-main" href="#prices">Посмотреть цены</a>
+      <a class="btn btn-alt" href="#contact">Записаться</a>
+    </div>
+  </div>
+</header>
+
+<section id="prices">
+  <div class="wrap">
+    <h2>Услуги и цены</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Сезонная переобувка</h3>
+        <p class="muted">Снятие, установка, проверка давления.</p>
+        <div class="price">от 1 200 ₽</div>
+      </div>
+      <div class="card">
+        <h3>Балансировка</h3>
+        <p class="muted">Проверка и корректировка дисбаланса колёс.</p>
+        <div class="price">от 250 ₽</div>
+      </div>
+      <div class="card">
+        <h3>Ремонт прокола</h3>
+        <p class="muted">Диагностика повреждения и ремонт шины.</p>
+        <div class="price">от 400 ₽</div>
+      </div>
+    </div>
+    <div class="note">Цены в этом демонстрационном сайте вымышлены. Для реального клиента сюда подставляются его услуги и прайс.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Почему удобно</h2>
+    <div class="points">
+      <div class="point"><b>По записи</b><br><span class="muted">Можно выбрать удобное время.</span></div>
+      <div class="point"><b>Без лишних услуг</b><br><span class="muted">Сначала объясняем, что требуется.</span></div>
+      <div class="point"><b>Для легковых авто</b><br><span class="muted">Основные работы с шинами и колёсами.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Записаться на шиномонтаж</h2>
+      <p class="muted">Позвоните или напишите — подберём свободное время.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="tel:+70000000000">Позвонить</a>
+        <a class="btn btn-alt" href="https://wa.me/70000000000">WhatsApp</a>
+      </div>
+      <div class="note">Телефон +7 000 000-00-00 — демонстрационный. В реальном заказе ставим контакт клиента.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 «Шахты Шина» • Демонстрационный сайт-визитка</div>
+</footer>
+
+</body>
+</html>
